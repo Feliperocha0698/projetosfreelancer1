@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.header{
+    background: #f0f4f7;
+    color: #333333;
+    height: 70px;
+    width: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.principal{
+   background: #f0f4f7;
+   color: #333333;
+   height: 50%;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   text-align: center;
+}
+
+.dados-pessoais label{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.dados-pessoais{
+    max-width: auto;
+    margin-bottom: 20px;
+}
+
+.dados-pessoais input[type="text"],
+.dados-pessoais input[type="email"],
+.dados-pessoais input[type="password"],
+.dados-pessoais input[type="tel"]{
+    display: block;
+    width: 100%;
+}
+
+fieldset{
+    border:none;
+}
+
+.area{
+    margin-bottom: 10px;
+}
+
+.tecnologias-1{
+    margin-bottom: 10px;
+}
+
+.texto textarea{
+  display: inline-block;
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+  margin-bottom: 15px;  
+}
+
+.curriculo input[type="file"]{
+    display: block;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: none;
+    cursor: pointer;
+    margin-left: 34%;
+}
+
+.botao{
+   display: block;
+   width: 100%;
+   padding: 12px 25px;
+   background-color: #007bff;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 18px;
+   font-weight: bold;
+   transition: background-color 0.3s white;
+}
+
+.botao:hover{
+    background-color: #0056b3;
+    transition: background-color 0.3s white
+    transform translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.area label{
+    cursor: pointer;
+}
+
+.tecnologias-1 label{
+    cursor: pointer;
+}
+
+.erro{
+    font-size: 14px;
+    margin-left: 5px;
+    color: red;
+}

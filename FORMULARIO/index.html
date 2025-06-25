@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Formulario de cadastro de desenvolvedores">
+    <meta name="keywords" content="html, css, javascript, formulario">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Felipe Rocha Maia">
+    <link rel="stylesheet" href="assests/css/style.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="titulo">Formulario de Cadastro</h1>
+        <p class="paragrafo">Coloque seus dados aqui</p>
+    </header>
+    <main class="principal">
+        <form action="#" method="post" class="dados">
+            <fieldset class="dados-pessoais">
+                <legend class="legend">Dados Pessoais</legend>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome">
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" id="sobrenome" name="sobrenome">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone">
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade">
+                <label for="estado">Estado:</label>
+                <input type="text" id="estado" name="estado">
+            </fieldset>
+            <fieldset class="area">
+                <legend class="legend">Qual a sua area de atuação?</legend>
+                <label for="backend">Backend</label>
+                <input type="radio" name="area" value="backend" id="backend">
+                <label for="frontend">Frontend</label>
+                <input type="radio" name="area" value="frontend" id="frontend">
+                <label for="fullstack">Fullstack</label>
+                <input type="radio" name="area" value="fullstack" id="fullstack">
+            </fieldset>
+            <fieldset class="tecnologias-1">
+                <legend class="legend">Quais tecnologias você usa?</legend>
+                <label for="html">HTML</label>
+                <input type="checkbox" name="tecnologia[]" id="html" value="html">
+                <label for="css">CSS</label>
+                <input type="checkbox" name="tecnologia[]" id="css" value="css">
+                <label for="javascript">JavaScript</label>
+                <input type="checkbox" name="tecnologia[]" id="javascript" value="javascript">
+                <label for="php">PHP</label>
+                <input type="checkbox" name="tecnologia[]" id="php" value="php">
+                <label for="python">Python</label>
+                <input type="checkbox" name="tecnologia[]" id="python" value="python">
+                <label for="java">Java</label>
+                <input type="checkbox" name="tecnologia[]" id="java" value="java">
+                <label for="c#">C#</label>
+                <input type="checkbox" name="tecnologia[]" id="csharp" value="csharp">
+                <label for="c++">C++</label>
+                <input type="checkbox" name="tecnologia[]" id="cplusplus" value="cplusplus">
+            </fieldset>
+            <fieldset class="texto">
+                    <legend class="legend">Contemos um pouco sobre você:</legend><br>
+                    <label for="sobre">Digite aqui sobre você:</label>
+                    <textarea name="sobre" id="sobre" cols="5" rows="5" placeholder="Digite aqui!"></textarea>
+            </fieldset>
+            <fieldset class="curriculo">
+                <legend>Enviar seu curriculo:</legend>
+                <input encypted="multipart/form-data" type="file" name="curriculo" id="curriculo">
+            </fieldset>
+            <button class="botao" type="submit">Enviar</button>
+        </form>
+    </main>
+    <script src="JS/script.js"></script>
+</body>
+</html>
