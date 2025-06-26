@@ -25,7 +25,7 @@ HTML5, CSS3 E JAVASCRIPT
 
 ### 📸 Imagens do projeto
 **PARTE DE CIMA DO FORMULÁRIO**
-![Imagem do formulário](FORMULARIO/IMG/Captura-1.png)
+![Imagem do formulário](IMG/Captura-2.png)
 
 **PARTE DE BAIXO DO FORMULÁRIO, C/ O CAMPO PRA COMENTÁRIOS E BOTÃO DE ENVIO**
-![Imagem do formulário](FORMULARIO/IMG/Captura-2.png)
+![Imagem do formulário](IMG/Captura-1.png)

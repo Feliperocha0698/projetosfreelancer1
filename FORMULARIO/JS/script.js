@@ -33,12 +33,17 @@ document.addEventListener('DOMContentLoaded', function(){
           isValid = false;
        }
  
-       // ✅ Validação de telefone
-       if (!/^\(?\d{2}\)?\s?\d{4,5}-\d{4}$/.test(telefone.value.trim())) {
-          mostrarErro(telefone, "Telefone inválido (Ex: (11) 91234-5678)");
-          isValid = false;
-       }
- 
+       
+       // ✅ Validação de telefone com span.erro-1 fixa
+const erroTelefone = document.querySelector('.erro-1');
+if (!/^\(?\d{2}\)?\s?\d{4,5}-\d{4}$/.test(telefone.value.trim())) {
+   erroTelefone.style.display = 'inline';
+   telefone.style.border = "2px solid red";
+   isValid = false;
+} else {
+   erroTelefone.style.display = 'none';
+   telefone.style.border = "";
+}
        // ✅ Validação da área (radio)
        const areaSelecionada = document.querySelector('input[name="area"]:checked');
        if (!areaSelecionada) {
@@ -99,8 +104,11 @@ document.addEventListener('DOMContentLoaded', function(){
     }
  
     function limparErros() {
-       document.querySelectorAll(".erro").forEach(el => el.remove());
-       document.querySelectorAll("input, textarea").forEach(el => el.style.border = "");
-    }
+      document.querySelectorAll(".erro").forEach(el => el.remove());
+      document.querySelectorAll("input, textarea").forEach(el => el.style.border = "");
+   
+      const erroTelefone = document.querySelector('.erro-1');
+      if (erroTelefone) erroTelefone.style.display = 'none';
+   }   
  });
  
