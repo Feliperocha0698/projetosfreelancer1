@@ -1,0 +1,12 @@
+function updateImagesForTheme(selector) {
+    if ($('body').hasClass('theme-dark')) {
+        $(selector).each(function() {
+            let imageUrl = $(this).attr('src');
+            if (imageUrl && !imageUrl.includes('-dark.')) {
+                const [name, extension] = imageUrl.split(/\.(?=[^.]+$)/);
+                const newImageUrl = `${name}-dark.${extension}`;
+                $(this).attr('src', newImageUrl);
+            }
+        });
+    } 
+}

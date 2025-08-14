@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Site completo de um restaurante 100% brasileiro, em nosso cardápio temos pratos tradicionais do país todo!!!">
+    <meta name="keywords" content="html,css e javascript, restaurante">
+    <meta name="author" content="Felipe Rocha Maia">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media_queries.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <title>Pratão do brasil</title>
+</head>
+<body>
+<header class="cabecalho">
+    <h1 class="titulo">Cardápio</h1>
+    <div class="menu-lateral">
+            <span class="material-symbols-outlined">
+               menu
+            </span>
+            <div class="itens-menu">
+                 <div class="barra-pesquisa" id="barra-pesquisa">
+                    <span class="material-symbols-outlined">
+                      search
+                   </span>
+                    <input type="text" placeholder="Pesquisar...">
+                </div>
+               <div class="carrinho">
+                   <span class="material-symbols-outlined">
+                       shopping_cart
+                    </span>
+                    <span id="contador-carrinho">
+                        0
+                    </span>
+                </div>
+                <div class="btn-usuario">
+                    <span class="material-symbols-outlined">
+                        person
+                    </span>
+                </div>
+                <div class="btn-favoritos">
+                    <span class="material-symbols-outlined">
+                        favorite
+                    </span>
+                </div>
+                <div class="btn-config">
+                    <span class="material-symbols-outlined">
+                        settings
+                    </span>
+                </div>
+                <div class="btn-sair">
+                    <span class="material-symbols-outlined">
+                        logout
+                    </span>
+                </div>
+            </div>
+        </div>
+    <h2 class="subtitulo">Menu principal</h2>
+    <nav arial aria-label="Menu-de-navegacao" class="menu-nav">
+        <ul class="menu-links">
+            <li class="menu-link"><a class="botao" href="index.html">Home</a></li>
+            <li class="menu-link"><a class="botao" href="sobre-nos.html">Sobre-nós</a></li>
+            <li class="menu-link"><a class="botao" href="fale-conosco.html">Fale conosco</a></li>
+        </ul>
+    </nav>
+</header>
+<main class="principal">
+    <h2 class="subtitulo">Aqui nós temos do café da manhã até o jantar:</h2>
+    <section class="refeicoes">
+        <nav aria-label="Menu-de-refeicoes" class="menu-nav">
+            <ol class="lista-refeicoes">
+                <li class="item"><a href="#cafe">Café da manhã</a></li>
+                <li class="item"><a href="#almoco">Almoço</a></li>
+                <li class="item"><a href="#jantar">Jantar/Café-noite</a></li>
+                <li class="item"><a href="#sobremesas">Sobremesas</a></li>
+                <li class="item"><a href="#bebidas_nao_alcoolicas">Bebidas sem alcoól</a></li>
+                <li class="item"><a href="#bebidas_alcoolicas">Bebidas alcoólicas</a></li>
+            </ol>
+        </nav>
+    </section>
+    <section id="cafe" class="cafe">
+        <h3 class="subtitulo">Café da manhã</h3>
+        <ol class="lista-cafe">
+            <li class="item">Pão na chapa<b>(torrado)</b>
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="Pao-na-chapa(torrado)">
+            </label>
+            <span class="preco">R$ 12,00</span>
+            <figure class="imagens">
+              <img src="./img/pao-na-chapa.png" alt="A imagem mostra um prato com um pão na chapa torrado">
+              <figcaption class="descricao">Uma excelente maneira de começar o seu dia, com um delicioso pão na chapa.</figcaption>
+            </figure>
+        </li>
+            <li class="item">Queijo quente<b>(Pão com queijo derretido)</b>
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="Queijo-quente">
+            </label>
+            <span class="preco">R$ 15,00</span>
+            <figure class="imagens">
+                <img src="./img/pao-com-queijo.png" alt="A imagem mostra um prato com um pão com queijo derretido">
+                <figcaption class="descricao">Uma excelente maneira de começar o seu dia, com um delicioso pão com queijo derretido.</figcaption>
+            </figure>
+            </li>
+            <li class="item">Pão com queijo coalho<b>(Pão com queijo coalho derretido)</b>
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="Pão-com-queijo-coalho">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/pao-com-queijo.png" alt="A imagem mostra um prato com um pão com queijo coalho derretido">
+                    <figcaption class="descricao">Um delicioso pão com queijo coalho derretido.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Pão com ovo<b>(Ovos fritos)</b>
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="Pão com ovo">
+            </label>
+                <span class="preco">R$ 10,00</span>
+                <figure class="imagens">
+                  <img src="./img/pao-com-ovo.png" alt="A imagem mostra um prato com um pão com ovo frito">
+                  <figcaption class="descricao">Um delicioso pão com ovo frito.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Pão com queijo, ovo e hamburguer<b>(cheese-egg burger, contém pão com ovo, queijo derretido e hamburguer)</b>
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="Pão-com-queijo-ovo-e-hamburguer">
+            </label>
+                <span class="preco">R$ 20,00</span>
+                <figure class="imagens">
+                  <img src="./img/hamburguer.png" alt="A imagem mostra um prato com um pão com ovo frito, queijo derretido e hamburguer">
+                  <figcaption class="descricao">Um delicioso pão com ovo frito, queijo derretido e hamburguer.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Pão com calabresa<b>(X-calabresa, contém pão com calabresa)</b>
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="Pão com calabresa">
+            </label>
+                <span class="preco">R$ 20,00</span>
+                <figure class="imagens">
+                  <img src="./img/x-calabresa.png" alt="A imagem mostra um prato com um pão com calabresa">
+                  <figcaption class="descricao">Um delicioso pão com calabresa.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Aipim com ovos
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="Aipim-com-ovos">
+            </label>
+                <span class="preco">R$ 22,00</span>
+                <figure class="imagens">
+                  <img src="./img/aipim-com-ovos.png" alt="A imagem mostra um prato com aipim e ovos">
+                  <figcaption class="descricao">Um delicioso aipim com ovos.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Aipim com ovos, e queijo coalho...
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="Aipim-com-ovos-e-queijo-coalho...">
+            </label>
+                <span class="preco">R$ 25,00</span>
+                <figure class="imagens">
+                  <img src="./img/aipim-queijo-coalho.png" alt="A imagem mostra um prato com um aipim e queijo coalho">
+                  <figcaption class="descricao">Um delicioso aipim com ovos, queijo coalho.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Aipim com ovos, e queijo coalho e carne de sal e calabresa
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="Aipim-com-ovos-e-queijo-coalho-e-carne-de-sal-e-calabresa">
+            </label>
+                <span class="preco">R$ 28,00</span>
+                  <figure class="imagens">
+                  <img src="./img/aipim-ovos-carne-de-sal-e-calabresa.png" alt="A imagem mostra um prato com um aipim, ovos, queijo coalho e carne de sal e calabresa">
+                  <figcaption class="descricao">Um delicioso aipim com ovos, queijo coalho, carne de sal e calabresa.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Tapioca com queijo coalho derretido
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="Tapioca-com-queijo-coalho-derretido">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                  <img src="img/tapioca-coalho.png" alt="A imagem mostra um prato com uma tapioca com queijo coalho derretido">
+                  <figcaption class="descricao">Um delicioso tapioca com queijo coalho derretido.</figcaption>
+                </figure>
+            </li>
+        </ol>
+    </section>
+    <section id="almoco" class="almoco">
+        <h3 class="subtitulo">Almoço</h3>
+        <ol class="lista-almoco">
+            <li class="item">Arroz com feijão e carne de boi(cozida na pressão)
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="Arroz-com-carne-na-pressao">
+            </label>
+                <span class="preco">R$ 25,00</span>
+                <figure class="imagens">
+                  <img src="./img/feijoada-tradicional.png" alt="A imagem mostra um prato com um feijoada com feijão carioquinha tradicional">
+                  <figcaption class="descricao">Um delicioso arroz com feijão e carne de boi cozida na pressão.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Arroz com feijão e carne e cupim(na brasa)
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="Arroz-com-feijão-e-carne-e-cupim">
+            </label>
+                <span class="preco">R$ 35,00</span>
+                <figure class="imagens">
+                  <img src="./img/feijao-preto.png" alt="A imagem mostra um prato com um feijoada tradicional com feijão preto e cupim">
+                  <figcaption class="descricao">Um delicioso arroz com feijão e carne e cupim na brasa.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Arroz com feijão e carne de porco(no forno)
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="Arroz-com-feijão-e-carne-de-porco">
+            </label>
+                <span class="preco">R$ 30,00</span>
+                <figure class="imagens">
+                  <img src="./img/feijao-preto.png" alt="A imagem mostra um prato com um feijoada tradicional com feijão preto e carne de porco">
+                  <figcaption class="descricao">Um delicioso arroz com feijão e carne de porco no forno.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Arroz com feijão, calabresa, pé de porco, etc...<strong>(feijoada)</strong>
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="feijoada">
+            </label>
+                <span class="preco">R$ 40,00</span>
+                <figure class="imagens">
+                  <img src="./img/feijao-preto.png" alt="A imagem mostra um prato com um feijoada tradicional com feijão preto, calabresa, pé de porco, etc...">
+                  <figcaption class="descricao">Um delicioso arroz com feijão preto, calabresa, pé de porco, etc...</figcaption>
+                </figure>
+            </li>
+            <li class="item">Arroz com feijão carioquinha tradicional, calabresa, pé de porco, etc...<strong>(feijoada)</strong>
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="feijoada-1">
+            </label>
+                <span class="preco">R$ 45,00</span>
+                <figure class="imagens">
+                  <img src="./img/feijoada-tradicional.png" alt="A imagem mostra um prato com um feijoada com feijão carioquinha tradicional">
+                  <figcaption class="descricao">Arroz com feijão carioquinha tradicional, calabresa, pé de porco, etc...feijoada</figcaption>
+                </figure>
+            </li>
+            <li class="item">Arroz com frango frito
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="frango-frito">
+            </label>
+                <span class="preco">R$ 35,00</span>
+                <figure class="imagens">
+                  <img src="./img/arroz-com-frango.png" alt="A imagem mostra um prato com um arroz com frango frito">
+                  <figcaption class="descricao">Um delicioso arroz com frango frito.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Arroz com frango (no forno)
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="frango-forno">
+            </label>
+                <span class="preco">R$ 35,00</span>
+                <figure class="imagens">
+                  <img src="./img/frango-forno.png" alt="A imagem mostra um prato com um arroz com frango feito no forno">
+                  <figcaption class="descricao">Um delicioso arroz com frango frito no forno.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Arroz com frango cozido (na pressão)
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="frango-cozido">
+            </label>
+                <span class="preco">R$ 35,00</span>
+                <figure class="imagens">
+                  <img src="./img/arroz-com-frango-cozido.png" alt="A imagem mostra um prato com um arroz com frango cozido na pressão">
+                  <figcaption class="descricao">Um delicioso arroz com frango cozido na pressão.</figcaption>
+                </figure>
+                </li>
+            <li class="item">Macarrão de forno(com queijo mussarela e presunto)
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="macarrao-de-forno">
+            </label>
+                <span class="preco">R$ 35,00</span>
+                <figure class="imagens">
+                  <img src="./img/macarrao-de-forno(com-queijo-presunto).png" alt="A imagem mostra um prato com um macarrão de forno com queijo mussarela e presunto">
+                  <figcaption class="descricao">Um delicioso macarrão de forno com queijo mussarela e presunto.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Macarrão de forno(com queijo mussarela e presunto e frango desfiado)
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="macarrão-de-forno-1">
+            </label>
+                <span class="preco">R$ 40,00</span>
+                  <figure class="imagens">
+                    <img src="./img/macarrão-de-forno-com(queijo-e-presunto-e-frango-desfiado).png" alt="A imagem mostra um prato com um macarrão de forno com queijo mussarela, presunto e frango desfiado">
+                    <figcaption class="descricao">Um delicioso macarrão de forno com queijo mussarela, presunto e frango desfiado.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Lasanha bolonhesa(Massa da lanhasa, molho bolonhesa, carne moída, molho de tomate, temperos, molho branco e queijo muzzarella ou parmesão)
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="lasanha-1">
+            </label>
+                <span class="preco">R$ 45,00</span>
+                <figure class="imagens">
+                  <img src="./img/lasanha-bolonhesa.png" alt="A imagem mostra um prato com uma lasanha bolonhesa">
+                  <figcaption class="descricao">Um delicioso lasanha bolonhesa.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Lasanha frango desfiado(Massa da lanhasa, requeijão cremoso, frango desfiado, temperos, molho branco e queijo muzzarella ou parmesão)
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="lasanha-2">
+            </label>
+                <span class="preco">R$ 50,00</span>
+                <figure class="imagens">
+                   <img src="./img/lasanha-de-frango.png" alt="A imagem mostra um prato com uma lasanha de frango desfiado">
+                   <figcaption class="descricao">Um delicioso lasanha de frango desfiado.</figcaption>
+                </figure>
+            </li>
+        </ol>
+    </section>
+    <section id="jantar" class="jantar">
+        <h3 class="subtitulo">Jantar/Café da noite</h3>
+        <ol class="lista-jantar">
+            <li class="item">Filé a parmegiana de frango com fritas
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="parmegiana-frango">
+            </label>
+                <span class="preco">R$ 45,00</span>
+                <figure class="imagens">
+                    <img src="./img/file-a-parmegiana-de-frango.png" alt="A imagem mostra um prato com um filé a parmegiana de frango com fritas">
+                    <figcaption class="descricao">Um delicioso filé a parmegiana de frango com fritas.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Filé a parmegiana de carne com fritas
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="parmegiana-carne">
+            </label>
+                <span class="preco">R$ 45,00</span>
+                <figure class="imagens">
+                    <img src="./img/file-a-parmegiana-de-carne.png" alt="A imagem mostra um prato com um filé a parmegiana de carne com fritas">
+                    <p class="descricao">Um delicioso filé a parmegiana de carne com fritas.</p>
+                </figure>
+            </li>
+            <li class="item">Omelete com queijo(muzzarella) e presunto
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="omelete-muzzarella">
+            </label>
+                <span class="preco">R$ 35,00</span>
+                <figure class="imagens">
+                    <img src="./img/omelete-com-queijo-e-presunto.png" alt="A imagem mostra um prato com um omelete com queijo muzzarella e presunto">
+                    <figcaption class="descricao">Um delicioso omelete com queijo muzzarella e presunto.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Omelete com queijo(parmesão), calabresa e carne moída
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="omelete-parmesao">
+            </label>
+                <span class="preco">R$ 40,00</span>
+                <figure class="imagens">
+                    <img src="./img/omelete-queijo-parmesao-carne-moida-e-calabresa.png" alt="A imagem mostra um prato com um omelete com queijo parmesão, calabresa e carne moída">
+                    <figcaption class="descricao">Um delicioso omelete com queijo parmesão, calabresa e carne moída.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Omelete com queijo(coalho), cream cheese e calabresa
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="omelete-queijo-coalho">
+            </label>
+                <span class="preco">R$ 40,00</span>
+                <figure class="imagens">
+                    <img src="./img/omelete-cream-cheese-queijo-coalho-e-calabresa.png" alt="A imagem mostra um prato com um omelete com queijo coalho, cream cheese e calabresa">
+                    <figcaption class="descricao">Um delicioso omelete com queijo coalho, cream cheese e calabresa.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Omelete com queijo(branco) e tomate
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="omelete-queijo-branco">
+            </label>
+                <span class="preco">R$ 35,00</span>
+                <figure class="imagens">
+                    <img src="./img/omelete-com-queijo-branco-com-tomate.png" alt="A imagem mostra um prato com um omelete com queijo branco com tomate">
+                    <figcaption class="descricao">Um delicioso omelete com queijo branco e tomate.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Sopa de carne com legumes
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="sopa-carne">
+            </label>
+                <span class="preco">R$ 35,00</span>
+                <figure class="imagens">
+                    <img src="./img/sopa-de-macarrao-com-carne .png" alt="A imagem mostra um prato com uma sopa de macarrão com carne e legumes">
+                    <figcaption class="descricao">Um delicioso sopa de carne com legumes.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Sopa de Frango com legumes
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="sopa-frango">
+            </label>
+                <span class="preco">R$ 35,00</span>
+                <figure class="imagens">
+                    <img src="./img/sopa-de-frango-com-macarrao.png" alt="A imagem mostra um prato com uma sopa de frango com macarrão">
+                    <figcaption class="descricao">Um delicioso sopa de frango com legumes.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Cuscuz com ovo
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="cuscuz-com-ovo">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/cuscuz-com-ovos.png" alt="A imagem mostra um prato com um cuscuz com dois ovos">
+                    <figcaption class="descricao">Um delicioso cuscuz com ovo.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Cuscuz com frago
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="cuscuz-com-frango">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/cuscuz-e-frango.png" alt="A imagem mostra um prato com um cuscuz com pedaços de frango">
+                    <figcaption class="descricao">Um delicioso cuscuz com pedaços de frango.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Cuscuz com calabresa e ovos
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="cuscuz-ovos-calabresa">
+            </label>
+                <span class="preco">R$ 20,00</span>
+                <figure class="imagens">
+                    <img src="./img/cuscuz-ovos-calabresa.png" alt="">
+                    <figcaption class="descricao">Um delicioso cuscuz com calabresa e ovos.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Cuscuz com leite
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="cuscuz-com-leite">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/cuscuz-com-leite.png" alt="A imagem mostra um prato com um cuscuz com leite">
+                    <figcaption class="descricao">Um delicioso cuscuz com leite.</figcaption>
+                </figure>
+            </li>
+        </ol>
+    </section>
+    <section id="sobremesas" class="sobremesas">
+        <h3 class="subtitulo">Sobremesas</h3>
+        <ol class="lista-sobremesas">
+            <li class="item">Pudim de Leite
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="pudim-de-leite">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/pudim-de-leite_files/5323fd93-07aa-4589-ac98-a7f57bdc9685.webp" alt="A imagem mostra um prato com um pudim de leite">
+                    <figcaption class="descricao">Um delicioso pudim de leite.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Pudim de Chocolate
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="pudim-de-chocolate">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/pudim-de-chocolate.png" alt="A imagem mostra um prato com um pudim de chocolate">
+                    <figcaption class="descricao">Um delicioso pudim de chocolate.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Cheesecake de Frutas Vermelhas
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="cheesecake-de-frutas-vermelhas">
+            </label>
+                <span class="preco">R$ 20,00</span>
+                <figure class="imagens">
+                    <img src="./img/cheesecake-de-frutas-vermelhas.png" alt="A imagem mostra um prato com um cheesecake de frutas vermelhas">
+                    <figcaption class="descricao">Um delicioso cheesecake de frutas vermelhas.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Tiramisu
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="tiramisu">
+            </label>
+                <span class="preco">R$ 20,00</span>
+                <figure class="imagens">
+                    <img src="./img/tiramisu.png" alt="A imagem mostra um prato com um tiramisu">
+                    <figcaption class="descricao">Um delicioso tiramisu.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Mousse de Morango
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="mousse-morango">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/mousse-de-morango.jpg" alt="A imagem mostra um copo com um mousse de morango">
+                    <figcaption class="descricao">Um delicioso mousse de morango.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Mousse de Maracuja
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="mousse-de-maracuja">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/mousse-de-maracuja.png" alt="A imagem mostra um copo com um mousse de maracujá">
+                    <figcaption class="descricao">Um delicioso mousse de maracujá.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Mousse de Chocolate
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="mousse-de-chocolate">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/mousse-de-chocolate.png" alt="A imagem mostra um copo com um mousse de chocolate">
+                    <figcaption class="descricao">Um delicioso mousse de chocolate.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Bolo de Chocolate
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="bolo-de-chocolate">
+            </label>
+                <span class="preco">R$ 20,00</span>
+                <figure class="imagens">
+                    <img src="./img/bolo-de-chocolate.png" alt="A imagem mostra um bolo de chocolate">
+                    <figcaption class="descricao">Um delicioso bolo de chocolate.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Bolo de Laranja
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="bolo-de-laranja">
+            </label>
+                <span class="preco">R$ 20,00</span>
+                <figure class="imagens">
+                    <img src="./img/bolo-de-laranja.png" alt="A imagem mostra um bolo de laranja">
+                    <figcaption class="descricao">Um delicioso bolo de laranja.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Bolo de Milho
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="bolo-de-milho">
+            </label>
+                <span class="preco">R$ 20,00</span>
+                <figure class="imagens">
+                    <img src="./img/bolo-de-milho.png" alt="A imagem mostra um bolo de milho">
+                    <figcaption class="descricao">Um delicioso bolo de milho.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Bolo de Coco
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="bolo-de-coco">
+            </label>
+                <span class="preco">R$ 20,00</span>
+                <figure class="imagens">
+                    <img src="./img/bolo-de-coco.png" alt="A imagem mostra um bolo de coco">
+                    <figcaption class="descricao">Um delicioso bolo de coco.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Brigadeiro
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="brigadeiro">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/brigadeiro.png" alt="A imagem mostra um brigadeiro">
+                    <figcaption class="descricao">Um delicioso brigadeiro.</figcaption>
+                </figure>
+            </li>
+        </ol>
+    </section>
+    <section class="bebidas_nao_alcoolicas">
+        <h3 class="subtitulo">Bebidas sem alcoól</h3>
+        <ol class="lista-bebidas_nao_alcoolicas">
+            <li class="item">Café
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="cafe">
+            </label>
+                <span class="preco">R$ 10,00</span>
+                <figure class="imagens">
+                    <img src="./img/cafe-preto.png" alt="A imagem mostra uma xícara de café preto">
+                    <figcaption class="descricao">Um delicioso café.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Café com leite
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="cafe-com-leite">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/cafe-preto-com-leite.png" alt="A imagem mostra uma xícara de café preto com leite">
+                    <figcaption class="descricao">Um delicioso café com leite.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Suco de laranja
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="suco-de-laranja">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/suco-de-laranja.png" alt="A imagem mostra um copo de suco de laranja">
+                    <figcaption class="descricao">Um delicioso suco de laranja.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Suco de limão
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="suco-de-limao">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/suco-de-limao.png" alt="A imagem mostra um copo de suco de limão">
+                    <figcaption class="descricao">Um delicioso suco de limão.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Suco de maracúja
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="suco-de-maracuja">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/suco-de-maracuja.png" alt="A imagem mostra um copo de suco de maracujá">
+                    <figcaption class="descricao">Um delicioso suco de maracujá.</figcaption>
+                </figure>
+                </li>
+                <li class="item">Suco de cajú
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="suco-de-caju">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/suco-de-caju.png" alt="A imagem mostra um copo de suco de cajú">
+                    <figcaption class="descricao">Um delicioso suco de cajú.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Suco de acerola
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="suco-de-acerola">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/suco-de-acerola.png" alt="A imagem mostra um copo de suco de acerola">
+                    <figcaption class="descricao">Um delicioso suco de acerola.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Suco de abacaxi
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="suco-de-abacaxi">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/suco-de-abacaxi.png" alt="A imagem mostra um copo de suco de abacaxi">
+                    <figcaption class="descricao">Um delicioso suco de abacaxi.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Coca-cola
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="coca-cola">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/lata-de-refrigerante-vermelha.png" alt="A imagem mostra uma lata de refrigerante vermelha">
+                    <figcaption class="descricao">Uma deliciosa coca-cola.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Pepsi
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="pepsi">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/lata-de-refrigerante-azul.png" alt="A imagem mostra uma lata de refrigerante azul">
+                    <figcaption class="descricao">Uma deliciosa pepsi.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Antartica
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="antartica">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/lata-de-refrigerante-verde.png" alt="A imagem mostra uma lata de refrigerante verde">
+                    <figcaption class="descricao">Uma deliciosa antártica.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Kuat
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="kuat">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/lata-de-refrigerante-verde.png" alt="A imagem mostra uma lata de refrigerante verde">
+                    <figcaption class="descricao">Uma deliciosa kuat.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Fanta
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="fanta">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/lata-de-refrigerante-laranja.png" alt="A imagem mostra uma lata de refrigerante laranja">
+                    <figcaption class="descricao">Uma deliciosa fanta.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Sprite
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="sprite">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/lata-de-refrigerante-verde.png" alt="A imagem mostra uma lata de refrigerante verde">
+                    <figcaption class="descricao">Uma deliciosa sprite.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Água
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="agua">
+            </label>
+                <span class="preco">R$ 10,00</span>
+                <figure class="imagens">
+                    <img src="./img/garrafa-de-agua.png" alt="A imagem mostra uma garrafa de água">
+                    <figcaption class="descricao">Uma água refrescante sem gás.</figcaption>
+                </figure>
+                </li>
+            <li class="item">Água com gás
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="agua-com-gas">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/garrafa-de-agua.png" alt="A imagem mostra uma garrafa de água com gás">
+                    <figcaption class="descricao">Uma água refrescante com gás.</figcaption>
+                </figure>
+            </li>
+        </ol>
+    </section>
+    <section id="bebidas_alcoolicas" class="bebidas_alcoolicas">
+        <h3 class="subtitulo">Bebidas com alcoól</h3>
+        <ol class="lista-bebidas_alcoolicas">
+            <li class="item">Skol
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="skol">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/garrafa-de-cerveja-marrom.png" alt="A imagem mostra uma garrafa de cerveja Skol de 500ml">
+                    <figcaption class="descricao">Uma deliciosa cerveja skol, de 500ml, gelada.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Brahma
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="brahma">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/garrafa-de-cerveja-marrom.png" alt="A imagem mostra uma garrafa de cerveja Brahma de 500ml">
+                    <p class="descricao">Uma deliciosa cerveja Brahma, de 500ml, gelada.</p>
+                </figure>
+            </li>
+            <li class="item">Itaipava
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="itaipava">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/garrafa-de-cerveja-marrom.png" alt="A imagem mostra uma garrafa de cerveja Itaipava de 500ml">
+                    <figcaption class="descricao">Uma deliciosa cerveja Itaipava, de 500ml, gelada.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Devassa
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="devassa">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/garrafa-de-cerveja-marrom.png" alt="A imagem mostra uma garrafa de cerveja Devassa de 500ml">
+                    <figcaption class="descricao">Uma deliciosa cerveja Devassa, de 500ml, gelada.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Schin
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="schin">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/garrafa-de-cerveja-marrom.png" alt="A imagem mostra uma garrafa de cerveja Schin de 500ml">
+                    <figcaption class="descricao">Uma deliciosa cerveja Schin, de 500ml, gelada.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Spaten
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="spaten">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/garrafa-de-cerveja-verde.png" alt="A imagem mostra uma garrafa de cerveja Spaten de 500ml">
+                    <figcaption class="descricao">Uma deliciosa cerveja Spaten, de 500ml, gelada.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Heineken
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="heineken">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/garrafa-de-cerveja-verde.png" alt="A imagem mostra uma garrafa de cerveja Heineken de 500ml">
+                    <figcaption class="descricao">Uma deliciosa cerveja Heineken, de 500ml, gelada.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Budweiser
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="budweiser">
+            </label>
+                <span class="preco">R$ 15,00</span>
+                <figure class="imagens">
+                    <img src="./img/garrafa-de-cerveja-marrom.png" alt="A imagem mostra uma garrafa de cerveja Budweiser de 500ml">
+                    <figcaption class="descricao">Uma deliciosa cerveja Budweiser, de 500ml, gelada.</figcaption>
+                </figure>
+            </li>
+            <li class="item">Whisky
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="whisky">
+            </label>
+                <span class="preco">R$ 75,00</span>
+                <figure class="imagens">
+                    <img src="./img/uisque.png" alt="A imagem mostra uma garrafa de whisky">
+                    <figcaption class="descricao">Um delicioso whisky com gelo</figcaption>
+                </figure>
+            </li>
+            <li class="item">Ace
+            <label>
+                <input type="checkbox" class="item-checkbox" name="pedido[]" value="ace">
+            </label>
+                <span class="preco">R$ 45,00</span>
+                <figure class="imagens">
+                    <img src="./img/bebida-de-limao.png" alt="A imagem mostra uma garrafa de ace">
+                    <figcaption class="descricao">Uma deliciosa ace</figcaption>
+                </figure>
+            </li>
+        </ol>
+    </section>
+</main>
+<footer class="rodape">
+    <p class="autor">Criado por Felipe Rocha Maia</p>
+    <p class="autor">&copy; Todos os direitos reservados - 2025</p>
+    <nav arial aria-label="Menu-das-minhas-redes-sociais" class="menu-nav">
+        <ul class="redes-sociais">
+            <li class="links-redes-sociais"><a class="botao" href="#">Github</a></li>
+            <li class="links-redes-sociais"><a class="botao" href="#">Linkedln</a></li>
+            <li class="links-redes-sociais"><a class="botao" href="#">Instagram</a></li>
+            <li class="links-redes-sociais"><a class="botao" href="#">Whatsapp</a></li>
+            <li class="links-redes-sociais"><a class="botao" href="#">X</a></li>
+        </ul>
+    </nav>
+</footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

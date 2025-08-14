@@ -1,0 +1,162 @@
+let subFollowersSearchResultsVisible = false;
+let subFollowersCurrentPage = 1;
+let subFollowersLastTermSearched = "";
+let subFollowersNoMorePagesAvailable = false;
+function showSearchedContent(){
+	const originalContent = document.getElementById('sub-followings-original-content');
+	const searchedContent = document.getElementById('sub-followings-searched-content');
+	originalContent.style.display = 'none';
+	searchedContent.style.display = 'block';
+}
+
+function showOriginalContent(){
+	const originalContent = document.getElementById('sub-followings-original-content');
+	const searchedContent = document.getElementById('sub-followings-searched-content');
+	originalContent.style.display = 'block';
+	searchedContent.style.display = 'none';
+}
+
+( () => {
+	"use strict";
+
+	const searchSubFollowersInput = document.querySelector( '#search-subs-follows-input' );
+
+	if ( !searchSubFollowersInput ) return;
+
+	const navbarSearch = document.querySelector( '#navbar-sub-followers-search' );
+	let searchSubFollowersInputFocused = false;
+	var searchSubFollowersTimer = null;
+
+	searchSubFollowersInput.addEventListener( 'focus', function () {
+		if ( !onlySpaces( searchSubFollowersInput.value ) ) {
+			navbarSearch.classList.add( 'done-searching' );
+			subFollowersSearchResultsVisible = true;
+		}
+	} );
+
+	searchSubFollowersInput.addEventListener( 'keyup', function () {
+		if ( onlySpaces( searchSubFollowersInput.value ) ) {
+			subFollowersCurrentPage = 1;
+			showOriginalContent();
+			navbarSearch.classList.remove('is-searching');
+			subFollowersSearchResultsVisible = false;
+			clearTimeout( searchSubFollowersTimer );
+			navbarSearch.classList.remove( 'is-searching' );
+			navbarSearch.classList.remove( 'done-searching' );
+		} else {
+			navbarSearch.classList.add( 'is-searching' );
+			clearTimeout( searchSubFollowersTimer );
+			searchSubFollowersTimer = setTimeout( subFollowersSearchFunction, 1000 )
+		}
+	} );
+
+	window.addEventListener( 'keydown', function ( e ) {
+		if ( e.key === 'Escape' ) {
+			if ( !searchSubFollowersInputFocused ) return;
+			searchSubFollowersInput.blur();
+			searchSubFollowersInputFocused = false;
+			navbarSearch.classList.remove( 'done-searching' );
+			subFollowersSearchResultsVisible = false;
+		}
+	} );
+
+	searchSubFollowersInput.addEventListener( 'blur', () => {
+		searchSubFollowersInputFocused = false;
+	} );
+
+	document.addEventListener( 'click', ev => {
+		const { target } = ev;
+		const clickedOutside = !navbarSearch?.contains( target );
+		if ( clickedOutside ) {
+			navbarSearch.classList.remove( 'is-searching' );
+			navbarSearch.classList.remove( 'done-searching' );
+			subFollowersSearchResultsVisible = false;
+			subFollowersCurrentPage = 1;
+		};
+	} );
+
+	function handleScroll() {
+		const $el = $(this);
+		const reachedBottom = (this.scrollHeight - $el.scrollTop() - $el.outerHeight()) < 1;
+		if (reachedBottom) {
+			subFollowersSearchFunction(null, subFollowersCurrentPage);
+		}
+	}
+
+	const searchResults = document.querySelector("#navbar-sub-followers-search");
+	if (searchResults) {
+		searchResults.addEventListener("scroll", handleScroll);
+	}
+} )();
+
+const isDifferentSubFollowersSearch = (input) => input.value !== subFollowersLastTermSearched;
+
+const shouldClearSubFollowersSearch = (n) =>  n === 'delete';
+
+function subFollowersSearchFunction(n) {
+	const navbarSearch = document.querySelector( '#navbar-sub-followers-search' );
+	const searchInput = document.querySelector( '#search-subs-follows-input' );
+
+	//Remove this line when pagination is implemented
+	subFollowersCurrentPage = 1;
+
+	if (isDifferentSubFollowersSearch(searchInput)) {
+		subFollowersNoMorePagesAvailable = false;
+	}
+
+	if (subFollowersNoMorePagesAvailable) return;
+
+	navbarSearch.classList.add('is-searching');
+	const formData = new FormData();
+	formData.append( '_token', document.querySelector( "input[name=_token]" )?.value );
+
+	if (shouldClearSubFollowersSearch(n)) {
+		subFollowersCurrentPage = 1;
+		formData.append('search', n);
+	} else {
+		formData.append('search', searchInput.value);
+	}
+
+	$.ajax( {
+		type: "POST",
+		url: `/dashboard/workspace/sub-followers/search`,
+		data: formData,
+		contentType: false,
+		processData: false,
+		success: function (result) {
+			renderByUseCase(result?.htmlUseCase, result.html);
+			navbarSearch.classList.add('done-searching');
+			navbarSearch.classList.remove('is-searching');
+			subFollowersSearchResultsVisible = true;
+			subFollowersLastTermSearched = searchInput.value;
+			subFollowersCurrentPage++;
+			showSearchedContent();
+		},
+		error: function (error) {
+			navbarSearch.classList.add('done-searching');
+			navbarSearch.classList.remove('is-searching');
+		}
+	} );
+
+	function renderByUseCase(useCase, html) {
+		const placeToInsert = $("#sub-followings-searched-content");
+		if (useCase === 'NO_SUBS_AND_FOLLOWERS_FOUND') {
+			const isInfinityScroll = subFollowersCurrentPage !== 1;
+			if (isInfinityScroll) {
+				subFollowersNoMorePagesAvailable = true
+			} else {
+				placeToInsert.html(html);
+			}
+		}
+
+		if (useCase === "LIST_OF_SUBS_AND_FOLLOWERS") {
+			const isFirstPage = subFollowersCurrentPage === 1;
+			if (isFirstPage) {
+				placeToInsert.html(html);
+			} else {
+				placeToInsert.append(html);
+			}
+		}
+	}
+}
+

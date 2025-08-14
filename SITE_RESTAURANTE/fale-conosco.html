@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Página de contato do restaurante pratão do Brasil">
+    <meta name="keywords" content="Fale Conosco, Duvidas, Contao, Entrar em contato">
+    <meta name="author" content="Felipe Rocha Maia">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media_queries.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <title>Fale Conosco</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="menu-lateral">
+            <span class="material-symbols-outlined">
+               menu
+            </span>
+            <div class="itens-menu">
+                 <div class="barra-pesquisa" id="barra-pesquisa">
+                    <span class="material-symbols-outlined">
+                      search
+                   </span>
+                    <input type="text" placeholder="Pesquisar...">
+                </div>
+                <div class="carrinho">
+                    <span class="material-symbols-outlined">
+                        shopping_cart
+                    </span>
+                    <span id="contador-carrinho">
+                        0
+                    </span>
+                </div>
+                <div class="btn-usuario">
+                    <span class="material-symbols-outlined">
+                        person
+                    </span>
+                </div>
+                <div class="btn-favoritos">
+                    <span class="material-symbols-outlined">
+                        favorite
+                    </span>
+                </div>
+                <div class="btn-config">
+                    <span class="material-symbols-outlined">
+                        settings
+                    </span>
+                </div>
+                <div class="btn-sair">
+                    <span class="material-symbols-outlined">
+                        logout
+                    </span>
+                </div>
+            </div>
+        </div>
+        <h1 class="titulo">Fale Conosco</h1>
+        <h2 class="subtitulo">Menu de navegação</h2>
+        <nav aria-label="Menu-de-navegacao" class="menu-nav">
+            <ul class="menu-links">
+                <li class="menu-link"><a class="botao" href="index.html">Home</a></li>
+                <li class="menu-link"><a class="botao" href="sobre-nos.html">Sobre Nós</a></li>
+                <li class="menu-link"><a class="botao" href="cardapio-restaurante.html">Cardápio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="principal">
+        <section class="fale-conosco">
+         <h2 class="subtitulo">Fale Conosco</h2>
+         <p class="paragrafo">Tem alguma dúvida, sugestão ou elogio? Entre em contato conosco!</p>
+         <form action="#" method="post" class="formulario">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" cols="10" required></textarea>
+            <button type="submit">Enviar</button>
+         </form>
+        </section>
+        <section class="contato">
+            <p class="paragrafo">Entre em contato conosco!</p>
+            <h2 class="subtitulo">Contate-nos!</h2>
+            <ul class="contato-menu-links">
+                <li class="menu-link"><a href="mailto:contato@prataodobrasil.com">Email</a></li>
+                <li class="menu-link"><a href="https://wa.me/5500000000000" target="_blank">Whatsapp</a></li>
+                <li class="menu-link"><a href="https://www.instagram.com/prataodobrasil" target="_blank">Instagram</a></li>
+                <li class="menu-link"><a href="https://x.com/prataodobrasil" target="_blank">X</a></li>
+                <li class="menu-link"><a href="https://www.linkedin.com/company/prataodobrasil" target="_blank">Linkedln</a></li>
+                <li class="menu-link"><a href="https://www.facebook.com/prataodobrasil" target="_blank">Facebook</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer class="rodape">
+        <p class="autor">Criado por Felipe Rocha Maia</p>
+        <p class="autor">&copy; Todos os direitos reservados - 2025</p>
+        <p class="autor">Abaixo estão as minhas redes sociais</p>
+        <nav aria-label="Menu-das-minhas-redes-sociais" class="menu-nav">
+            <ul class="redes-sociais">
+                <li class="links-redes-sociais"><a class="botao" href="#">Github</a></li>
+                <li class="links-redes-sociais"><a class="botao" href="#">Linkedln</a></li>
+                <li class="links-redes-sociais"><a class="botao" href="#">Instagram</a></li>
+                <li class="links-redes-sociais"><a class="botao" href="#">Whatsapp</a></li>
+                <li class="links-redes-sociais"><a class="botao" href="#">X</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

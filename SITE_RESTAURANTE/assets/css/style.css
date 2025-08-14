@@ -1,0 +1,257 @@
+/* RESET CSS BÁSICO */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    /* cursor: pointer; */
+}
+
+/* REMOVE OS ESTILOS DAS LISTAS */
+ul, ol {
+    list-style: none;
+}
+
+/* REMOVE OS ESTILOS DOS LINKS */
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+/* ESTILO DOS BOTÕES */
+a.botao{
+    padding: 10px 20px;
+}
+
+/*COR DO SITE*/
+body{
+    background-color: #fafafa;
+}
+
+/* ESTILIZAÇÃO DO TITULO PRINCIPAL DO SITE */
+.titulo{
+    color: black;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+/* ESTILAZAÇÃO DOS SUBTITULOS */
+.subtitulo{
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+/* ESTILIZAÇÃO DOS MENUS DE LINKS DO SITE */
+.menu-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* ESTILIZAÇÃO DOS PARAGRAFOS */
+.paragrafo{
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+/* ESTILIZAÇÃO DOS CRÉDITOS DO SITE */
+.autor{
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    border: 2px solid black;
+    padding: 1px;
+    border-radius: 20px;
+}
+
+/* ESTILIZAÇÃO DOS LINKS DAS MINHAS REDES SOCIAIS */
+.redes-sociais{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* ESTILIZAÇÃO DO MENU "CAFÉ DA MANHÃ, ALMOÇO, JANTAR, SOBREMESAS E BEBIDAS" */
+.lista-refeicoes{
+    list-style: none;
+    padding: 5px;
+    margin-top: 10px;
+    display: inline-block;
+    margin-left: 44%;
+    margin-right: 45%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+/* ESPAÇAMENTO DOS ITENS DA LISTA DE REFEIÇÕES */
+.lista-refeicoes li{
+    margin-bottom: 4px;
+}
+
+/* ESTILIZAÇÃO DOS PREÇOS DOS PRODUTOS */
+.lista-cafe .preco{
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;   
+    display: block;
+    text-align: center;
+
+}
+
+/*ESTILIZAÇÃO DOS PRODUTOS DA LISTA DE ITENS*/
+.item{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* TAMANHO DAS IMAGENS DO CARDAPIO */
+.imagens{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* CONFIG IMAGENS DENTRO DA TAG FIGURE*/
+.imagens img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+
+/* CONFIG FIGCAPTION */
+.imagens figcaption{
+    margin-top: 8px;
+    font-size: 25px;
+    text-align: center;
+    color: black;
+}
+
+/* CENTRALIZANDO O FORMULARIO */
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.formulario input, .formulario textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.formulario button{
+    width: fit-content;
+    padding: 12px 24px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 6px;
+    border-color: black;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulario button:hover{
+    background-color: green;
+}
+
+/* CONFIG LINKS FALE CONOSCO */
+.contato-menu-links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin-top: 20;
+}
+
+/* CONFIG DO MENU DOS LINKS */
+.menu-link a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: blue;
+    padding: 10px 16px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-lateral{
+  cursor: pointer;
+  display: block;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+/* CONFIG DO MENU LATERAL */
+.itens-menu{
+    display: none;
+    cursor: pointer;
+}
+
+.menu-lateral.ativo .itens-menu{
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.barra-pesquisa {
+  margin-top: 0;
+}
+
+.barra-pesquisa.ativo {
+  display: block;
+}
+
+/* CONFIG CARRINHO MENU LATERAL */
+.carrinho {
+  position: static;
+  display: inline-block;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#contador-carrinho {
+  position: static;
+  top: 125px;
+  margin-left: 2px;
+  margin-top:1px;
+  right: 98%;
+  /* background-color: goldenrod; */
+  color: green;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+ display: none;
+}
+
+.carrinho.ativo #contador-carrinho {
+  display: block;
+
+}
