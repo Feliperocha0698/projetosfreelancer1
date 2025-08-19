@@ -1,9 +1,0 @@
- function showInsufficientCreditsError(isAnonymousUser = false) {
-     let message = trans("Insufficient credits. Upgrade your plan or buy extra credits.");
-
-    if (isAnonymousUser) {
-         message = trans("Agent unavailable at the moment, please try again in a few minutes or contact support.");
-     }
-
-    toastr.error(message);
-}
