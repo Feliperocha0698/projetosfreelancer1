@@ -21,11 +21,11 @@ Tecnologias usadas
 HTML5, CSS3 E JAVASCRIPT
 
 📸 Imagens do projeto
-PARTE DE CIMA DO FORMULÁRIO Imagem do formulário
+PARTE DE BAIXP DO FORMULÁRIO Imagem do formulário
 
 ![imagem da tela do formulário](PRINTS_DOS_PROJETOS/FORMULARIO1.png)
 
-PARTE DE BAIXO DO FORMULÁRIO, C/ O CAMPO PRA COMENTÁRIOS E BOTÃO DE ENVIO Imagem do formulário
+PARTE DE CIMA DO FORMULÁRIO, C/ O CAMPO PRA COMENTÁRIOS E BOTÃO DE ENVIO Imagem do formulário
 
 ![imagem da parte de baixo do formulário](PRINTS_DOS_PROJETOS/FORMULARIO2.png)
 
